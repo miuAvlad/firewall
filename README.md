@@ -8,14 +8,14 @@ The goal of this project is to develop a Next Generation Firewall that is design
 
 - Port and PID Mapping: This feature enables the mapping of ports to process identifiers (PIDs), allowing for the termination of processes in response to the detection of malicious packets.
 
-- Wi-Fi Network Interface Sniffing: The application includes the ability to capture and analyze network packets on Wi-Fi interfaces. This feature provides insight into the Wi-Fi packet format and aids in the potential development of a user-space firewall.
+- Wi-Fi Network Interface Sniffing: The application includes the ability to capture and analyze network packets on Wi-Fi interfaces. This feature provides insight into the Wi-Fi packet format and aids in the potential development of a user-space firewall.[][][][][]
 
 - Network Interface Configuration: To support packet routing at the OSI Layer 3/4, ongoing work involves understanding Linux kernel networking. The goal of configure_NIC is to utilize the Netlink library for communication between user space and kernel space
 # Future Features
 
 The firewall will evolve to include more advanced features, such as
 
-- Port Filtering: Allowing users to block or allow traffic based on port numbers.
+- Port Filtering: Allowing users to block or allow traffic based on port  numbers.
 - TLS/SSL Inspection: Inspecting encrypted traffic to enhance security without compromising privacy.
 
 # Next Steps
