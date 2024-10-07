@@ -2,9 +2,7 @@
 # Project Overview
 
 The goal of this project is to develop a Next Generation Firewall that is designed to work across multiple platforms. Currently, I am focusing on Linux integration as the first step in this process.
-# Current Features and Development
-
-At this stage, the only feature implemented is
+# Development
 
 - Port Scanning: This feature works by utilizing the output of bash commands to gather information about open ports on the system.
 
