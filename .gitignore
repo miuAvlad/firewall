@@ -1,3 +1,4 @@
 docs/
-/*/
-/experiment/*/
+/experiment/*
+!/experiment/*.c
+!/experiment/*.cpp
