@@ -28,3 +28,9 @@ The immediate goal is to complete the C++ implementation for reading port inform
 - The comments within the code are written in a mix of Romanian and English, specifically for my own use. They help me recall what I've done, especially if I step away from the project for an extended period and need a refresher.
 - I plan to include diagrams and screenshots of the file system and file formats to provide a clearer understanding of the inner workings of the project.
 - As of this commit, another_port_scanner.cpp is designed to function with both TCP IPv4 and TCP IPv6 protocols(/proc/net/tcp has the same format as /proc/net/tcp6).
+
+# links to resources used
+    https://manpages.debian.org/testing/libnetfilter-queue-doc/nfq_handle_packet.3.en.html
+    https://man7.org/linux/man-pages/man7/netlink.7.html
+    https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
+    http://charette.no-ip.com:81/programming/doxygen/netfilter/structnfq__handle.html
