@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <netinet/ip.h>
+
 #include <arpa/inet.h>
 #include <linux/netfilter.h>
 #include <libnetfilter_queue/libnetfilter_queue.h>
@@ -14,6 +15,8 @@ static int callback_function(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg, st
 }
 
 int main(){
+	const char  command = 'sudo iptables -A INPUT -p tcp --dport 80 -j NFQUEUE --queue-num 0';
+
 	struct nfq_handle *h = nfq_open();
 	struct nf1_q_handle *qh;
 	struct nfnl_handle *nh;

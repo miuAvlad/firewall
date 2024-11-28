@@ -1,0 +1,2 @@
+- simple server-client model to send data and verify if the packets can be routed
+- not using loopback address because sending packets through loopback address does not route them through kernel (important detail)

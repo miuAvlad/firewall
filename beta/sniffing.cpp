@@ -5,9 +5,9 @@
 #include <netinet/ip.h>
 #include <netinet/tcp.h>
 #include <arpa/inet.h>
-#include <sys/ioctl.h>      // pentru funcția ioctl
-#include <net/if.h>         // pentru structura ifreq
-#include <linux/wireless.h> // pentru structura iwreq
+#include <sys/ioctl.h>      
+#include <net/if.h>         
+#include <linux/wireless.h> 
 #include <sys/socket.h>
 
 struct ieee80211_radiotap_header
@@ -41,7 +41,6 @@ bool isInterfaceInMonitorMode(const char *ifname)
     memset(&req, 0, sizeof(struct iwreq));   // Initializam structura cu 0 (all bytes of structure)
     strncpy(req.ifr_name, ifname, IFNAMSIZ); // Setam numele interfetei
 
-    // Folosim ioctl pentru a obtine modul interfetei
     if (ioctl(sockfd, SIOCGIWMODE, &req) == -1)
     {
         std::cerr << "Nu s-au putut obtine informatiile despre modul interfetei\n";
@@ -51,7 +50,7 @@ bool isInterfaceInMonitorMode(const char *ifname)
 
     close(sockfd);
 
-    // Verificam modul interfetei
+
     if (req.u.mode == IW_MODE_MONITOR)
     {
         std::cout << ifname << " Este in mod monitor. \n";
@@ -80,7 +79,6 @@ bool checkAddr4Present(struct ieee80211_header *wifi_header)
         return false;
     }
 }
-// Callback function
 void packetHandler(unsigned char *userData, const struct pcap_pkthdr *pcap_pkthdr, const u_char *packet)
 {
 
@@ -121,7 +119,6 @@ int main()
         std::cerr << "Error finding network interfaces" << errbuff << std::endl;
         return 1;
     }
-    // Alegem prima interfata
     device = allDevs;
 
     while (device != nullptr)
@@ -163,7 +160,6 @@ int main()
     pcap_close(handle);
     std::cout << isInterfaceInMonitorMode("wlp2s0");
 
-    // Loop pentru capturarea pachetelor
     return 0;
     pcap_loop(handle, 10, packetHandler, nullptr);
     pcap_freealldevs(allDevs);
