@@ -20,7 +20,10 @@ The firewall will evolve to include more advanced features, such as
 
 # Next Steps
 
-The immediate goal is to complete the C++ implementation for reading port information directly from the system, which will serve as the foundation for the more advanced features to come.
+- Port filtering 
+- Stateful firewalling
+- Aplication-level firewall | TLS/SSL inspection
+- IDS 
 
 # Note
 

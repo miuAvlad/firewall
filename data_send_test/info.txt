@@ -1,2 +1,3 @@
 - simple server-client model to send data and verify if the packets can be routed
 - not using loopback address because sending packets through loopback address does not route them through kernel (important detail)
+- daca vrei sa rulezi nu uita ca ai instalat pachetele dotenv in environmentul de python (activate in terminalul in care vrei sa rulezi smecheria)
